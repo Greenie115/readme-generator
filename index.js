@@ -4,7 +4,7 @@ const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
 
 // array of questions for user
-inquirer.prompt([
+const questions = [
     {
         type: 'input',
         name: 'title',
@@ -41,11 +41,14 @@ inquirer.prompt([
         name: 'Tests',
         message: 'do any test need to be ran?'
     },
-])
+]
     .then((res) => {
         console.log(res)
-        fs.writeFile('README.md', JSON.stringify(res), (err) => {
-                generateMarkdown();
             })
-        })
     
+function init(){
+    inquirer.prompt(questions)
+        .then((res) => {
+            console.log('README file created')
+        }
+)}
