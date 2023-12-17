@@ -11,11 +11,37 @@ const questions = [
         message: 'What is the name of your project?'
     },
     {
+        type: 'input',
+        name: 'description',
+        message: 'Describe your project'
+    },
+    {
+        type: 'input',
+        name: 'installation',
+        message: 'How do you instal the project?'
+    },
+    {
+        type: 'input',
+        name: 'usage',
+        message: 'Tell people how to use your project'
+    },
+    {
         type: 'list',
         name: 'license',
-        message: 'which license does your project need?',
+        message: 'Which license does your project need?',
         choices: ['MIT', 'Apache', 'GPL', 'No license needed']
+    },
+    {
+        type: 'input',
+        name: 'Contributing',
+        message: 'How cna other contribute to your project?'
+    },
+    {
+        type: 'input',
+        name: 'Tests',
+        message: 'do any test need to be ran?'
     }
+    
 ];
 
 
