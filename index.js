@@ -44,16 +44,8 @@ inquirer.prompt([
 ])
     .then((res) => {
         console.log(res)
-    })
-
-// // function to write README file
-// function writeToFile(fileName, data) {
-// }
-
-// // function to initialize program
-// function init() {
-
-// }
-
-// // function call to initialize program
-// init();
+        fs.writeFile('README.md', JSON.stringify(res), (err) => {
+                generateMarkdown();
+            })
+        })
+    
