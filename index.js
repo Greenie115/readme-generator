@@ -42,17 +42,15 @@ const questions = [
         message: 'do any test need to be ran?'
     },
 ]
-    .then((res) => {
-        console.log(res)
-    })
 
-function writeFile(){
-    return fs.writeFile(path)
+function writeFile(fileName, data){
+    return fs.writeFile(generateMarkdown)
 }
 
 function init() {
     inquirer.prompt(questions)
         .then((res) => {
+            writeFile(res)
             console.log('README file created')
         }
         )
