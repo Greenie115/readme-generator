@@ -44,11 +44,19 @@ const questions = [
 ]
     .then((res) => {
         console.log(res)
-            })
-    
-function init(){
+    })
+
+function writeFile(){
+    return fs.writeFile(path)
+}
+
+function init() {
     inquirer.prompt(questions)
         .then((res) => {
             console.log('README file created')
         }
-)}
+        )
+}
+
+
+init();
