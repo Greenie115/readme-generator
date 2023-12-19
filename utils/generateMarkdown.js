@@ -4,7 +4,7 @@ function generateMarkdown(data) {
 ## Description
 ${data.description}
 ## Installation
-${data.installation}
+    ${data.installation}
 ## Usage
 ${data.usage}
 ## License
@@ -12,7 +12,7 @@ ${data.license}
 ## Contributing
 ${data.contributing}
 ## Tests
-${data.tests}
+    ${data.tests}
 `;
 }
 
