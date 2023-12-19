@@ -34,19 +34,22 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'Contributing',
+        name: 'contributing',
         message: 'How cna other contribute to your project?'
     },
     {
         type: 'input',
-        name: 'Tests',
+        name: 'tests',
         message: 'Do any test need to be ran?'
     },
 ]
 
 function writeFile(fileName, data){
     let fileContent = generateMarkdown(data)
-    fs.writeFile(fileName, fileContent, (error) => {
+    fs.writeFile(fileName, fileContent, (err) => {
+        if (err){
+            console.log('There was and error, please check your project')
+        }
         console.log('README created!')
     })
 }
