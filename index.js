@@ -2,6 +2,7 @@ const fs = require("fs");
 const path = require('path');
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
+const { error } = require("console");
 
 // array of questions for user
 const questions = [
@@ -39,19 +40,21 @@ const questions = [
     {
         type: 'input',
         name: 'Tests',
-        message: 'do any test need to be ran?'
+        message: 'Do any test need to be ran?'
     },
 ]
 
 function writeFile(fileName, data){
-    return fs.writeFile(generateMarkdown)
+    let fileContent = generateMarkdown(data)
+    fs.writeFile(fileName, fileContent, (error) => {
+        console.log('README created!')
+    })
 }
 
 function init() {
     inquirer.prompt(questions)
         .then((res) => {
             writeFile(res)
-            console.log('README file created')
         }
         )
 }
