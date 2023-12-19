@@ -57,7 +57,7 @@ function writeFile(fileName, data){
 function init() {
     inquirer.prompt(questions)
         .then((res) => {
-            writeFile('README.me', res)
+            writeFile('README.md', res)
         }
         )
 }
