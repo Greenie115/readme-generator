@@ -1,5 +1,6 @@
-# test [![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+# README Generator [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 ## Table Of Content
+
 - [Description](#Description)
 
 - [installation](#Installation)
@@ -15,19 +16,17 @@
 - [Contact Me](#Contact-Me)
 
 ## Description
-
-
-tes
+Create a fast simple README.md file that gets added to your project once it's ranin ```node.js```
 ## Installation
-    tes
+    npm i
 ## Usage
-tes
+Run ```node index.js``` and the Terminal will prompt the user with questions to fill in the README file
 ## License
-Apache
+MIT
 ## Contributing
-test
+Clone the repo and submit a pull request 
 ## Tests
-    tes
+    npm test
 ## Contact-Me
-Github: [Greenie115](#github.com/Greene115), 
-Email: [](123@gmail.com)
+Github: [Greenie115](github.com/Greenie115), 
+Email: [dggreen545@gmail.com](dggreen545@gmail.com)
