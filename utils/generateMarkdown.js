@@ -5,7 +5,7 @@ function generateMarkdown(data) {
 
 - [Description](#Description)
 
-- [installation](#Installation)
+- [Installation](#Installation)
 
 - [Usage](#Usage)
 
