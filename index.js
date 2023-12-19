@@ -1,9 +1,8 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 const generateMarkdown = require("./utils/generateMarkdown");
+const license = require('./utils/generateMarkdown')
 
-
-// array of questions for user
 const questions = [
     {
         type: 'input',
@@ -41,13 +40,24 @@ const questions = [
         name: 'tests',
         message: 'Do any test need to be ran?'
     },
+    {
+        type: 'input',
+        name: 'GitHub',
+        message: 'Please enter your GitHub username for user to find you'
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'What email can users contact you on? '
+    }
 ]
 
-function writeFile(fileName, data){
+function writeFile(fileName, data) {
     let fileContent = generateMarkdown(data)
+    license(data)
     fs.writeFile(fileName, fileContent, (err) => {
-        if (err){
-            console.log('There was and error, please check your project')
+        if (err) {
+            console.log('There was an error, please check your project')
         }
         console.log('README created!')
     })
